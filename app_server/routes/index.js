@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
-});
+var ctrlCategory = require('../controllers/category.controller');
+
+//  Category APIs
+router.post('/category', ctrlCategory.categoryPost);
+router.get('/categories', ctrlCategory.categoryGetAll);
 
 module.exports = router;

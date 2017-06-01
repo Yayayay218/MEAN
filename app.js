@@ -7,6 +7,10 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+
+//Bring the data model
+require('./app_server/models/db');
+
 var routesApi = require('./app_server/routes/index');
 
 app.use(favicon());
