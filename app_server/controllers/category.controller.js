@@ -24,7 +24,7 @@ module.exports.categoryPost = function (req, res) {
 //  GET all categories
 module.exports.categoryGetAll = function (req, res) {
     Categories.find(function (err, category) {
-        if(err)
+        if (err)
             sendJSONresponse(res, 404, err);
         else
             sendJSONresponse(res, 200, category);

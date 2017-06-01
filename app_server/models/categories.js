@@ -4,7 +4,8 @@ var categoriesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    lastUpdate: Date
+    lastUpdate: Date,
+    playlists: [{type: Schema.Types.ObjectId, ref: 'Playlists'}]
 });
 
 mongoose.model('Categories', categoriesSchema);
