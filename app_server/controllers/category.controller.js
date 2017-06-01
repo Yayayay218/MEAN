@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise;
 
 var Categories = mongoose.model('Categories');
 
-var sendJSONrespone = function (res, status, content) {
+var sendJSONresponse = function (res, status, content) {
     res.status(status);
     res.json(content);
 };
@@ -15,9 +15,9 @@ module.exports.categoryPost = function (req, res) {
 
     category.save(function (err, category) {
         if (err)
-            sendJSONrespone(res, 400, err);
+            sendJSONresponse(res, 400, err);
         else
-            sendJSONrespone(res, 201, category);
+            sendJSONresponse(res, 201, category);
     })
 };
 
@@ -25,8 +25,46 @@ module.exports.categoryPost = function (req, res) {
 module.exports.categoryGetAll = function (req, res) {
     Categories.find(function (err, category) {
         if(err)
-            sendJSONrespone(res, 404, err);
+            sendJSONresponse(res, 404, err);
         else
-            sendJSONrespone(res, 200, category);
+            sendJSONresponse(res, 200, category);
     })
+};
+
+//  DEL category
+module.exports.categoryDel = function (req, res) {
+    var categoryID = req.params.categoryID;
+    if (categoryID) {
+        Categories.findByIdAndRemove(categoryID, function (err) {
+            if (err) {
+                sendJSONresponse(res, 404, err);
+            }
+            sendJSONresponse(res, 204, {'message': 'success'});
+
+        });
+    } else {
+        sendJSONresponse(res, 404, {'message': 'Not found categoryID'});
+    }
+};
+
+//  PUT category
+module.exports.categoryPut = function (req, res) {
+    if (req.params.categoryID) {
+        Categories.findById(req.params.categoryID, function (err, category) {
+            if (err) {
+                res.send(err);
+                return;
+            }
+            category.name = req.body.name;
+            category.save(function (err, category) {
+                if (err) {
+                    res.send(err);
+                } else {
+                    sendJSONresponse(res, 201, category);
+                }
+            });
+        });
+    } else {
+        sendJSONresponse(res, 404, {'message': 'Not found categoryID'});
+    }
 };
