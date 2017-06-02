@@ -14,5 +14,6 @@ router.delete('/category/:categoryID', ctrlCategory.categoryDel);
 router.post('/playlist', ctrlPlaylist.playlistPost);
 router.get('/playlists', ctrlPlaylist.playlistGetAll);
 router.delete('/playlist/:playlistID', ctrlPlaylist.playlistDel);
+router.put('/playlist/:playlistID', ctrlPlaylist.playlistPut);
 
 module.exports = router;

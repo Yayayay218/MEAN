@@ -4,7 +4,11 @@ var categoriesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    lastUpdate: Date,
+    updateAt: Date,
+    createAt: {
+        type: Date,
+        default: Date.now()
+    },
     playlists: [{type: Schema.Types.ObjectId, ref: 'Playlists'}]
 });
 

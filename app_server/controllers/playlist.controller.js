@@ -77,7 +77,66 @@ module.exports.playlistDel = function (req, res) {
 
         });
     } else {
-        sendJSONresponse(res, 404, {'message': 'Not found categoryID'});
+        sendJSONresponse(res, 404, {'message': 'Not found playlistID'});
+    }
+};
+
+//  PUT a playlist
+module.exports.playlistPut = function (req, res) {
+    var playlistID = req.params.playlistID;
+    if (playlistID) {
+        Playlists.findById(playlistID, function (err, playlist) {
+            if (err) {
+                res.send(err);
+                return;
+            }
+            else {
+                upload(req, res, function (err) {
+                    if (err) {
+                        res.json({error_code: 1, err_desc: err});
+                        return;
+                    }
+                    else {
+                        if (req.file) {
+                            var filePath = 'app_server/uploads/playlists/' + playlist.coverPhoto;
+                            var img = req.file || {};
+                            playlist.name = req.body.name;
+                            playlist.key = req.body.key;
+                            playlist.type = req.body.type;
+                            playlist.coverPhoto = img.filename;
+                            playlist.updateAt = Date.now();
+
+                            playlist.save(function (err, playlist) {
+                                if (err) {
+                                    sendJSONresponse(res, 400, err);
+                                }
+                                else {
+                                    fs.unlink(filePath);
+                                    sendJSONresponse(res, 201, playlist);
+                                }
+                            });
+                        }
+                        else {
+                            playlist.name = req.body.name;
+                            playlist.key = req.body.key;
+                            playlist.type = req.body.type;
+                            playlist.updateAt = Date.now();
+
+                            playlist.save(function (err, playlist) {
+                                if (err) {
+                                    sendJSONresponse(res, 400, err);
+                                }
+                                else {
+                                    sendJSONresponse(res, 201, playlist);
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        })
+    } else {
+        sendJSONresponse(res, 404, {'message': 'Not found playlistID'});
     }
 };
 

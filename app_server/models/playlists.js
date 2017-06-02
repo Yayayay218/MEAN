@@ -8,7 +8,12 @@ var playlistsSchema = new mongoose.Schema({
     type: {
         type: Number,
         default: 0
-    }
+    },
+    createAt: {
+        type: Date,
+        default: Date.now()
+    },
+    updateAt: Date
 });
 
 mongoose.model('Playlists', playlistsSchema);

@@ -25,11 +25,13 @@ module.exports.categoryPost = function (req, res) {
 module.exports.categoryGetAll = function (req, res) {
     Categories.find({})
         .sort({name: 'asc'})
-        .find(function (err, category) {
+        .find({})
+        .populate('playlists')
+        .exec(function (err, category) {
             if (err)
                 sendJSONresponse(res, 404, err);
             else
-                sendJSONresponse(res, 200, category);
+                sendJSONresponse(res, 200, {'data': category});
         })
 };
 
@@ -59,6 +61,7 @@ module.exports.categoryPut = function (req, res) {
             }
             category.name = req.body.name;
             category.playlists = req.body.playlist;
+            category.updateAt = Date.now();
 
             category.save(function (err, category) {
                 if (err) {
