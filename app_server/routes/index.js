@@ -13,5 +13,6 @@ router.delete('/category/:categoryID', ctrlCategory.categoryDel);
 //  Playlist APIs
 router.post('/playlist', ctrlPlaylist.playlistPost);
 router.get('/playlists', ctrlPlaylist.playlistGetAll);
+router.delete('/playlist/:playlistID', ctrlPlaylist.playlistDel);
 
 module.exports = router;

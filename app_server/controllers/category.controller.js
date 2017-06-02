@@ -12,7 +12,7 @@ var sendJSONresponse = function (res, status, content) {
 module.exports.categoryPost = function (req, res) {
     var category = new Categories();
     category.name = req.body.name;
-
+    category.playlists = req.body.playlist;
     category.save(function (err, category) {
         if (err)
             sendJSONresponse(res, 400, err);
@@ -23,12 +23,14 @@ module.exports.categoryPost = function (req, res) {
 
 //  GET all categories
 module.exports.categoryGetAll = function (req, res) {
-    Categories.find(function (err, category) {
-        if (err)
-            sendJSONresponse(res, 404, err);
-        else
-            sendJSONresponse(res, 200, category);
-    })
+    Categories.find({})
+        .sort({name: 'asc'})
+        .find(function (err, category) {
+            if (err)
+                sendJSONresponse(res, 404, err);
+            else
+                sendJSONresponse(res, 200, category);
+        })
 };
 
 //  DEL category
@@ -56,6 +58,8 @@ module.exports.categoryPut = function (req, res) {
                 return;
             }
             category.name = req.body.name;
+            category.playlists = req.body.playlist;
+
             category.save(function (err, category) {
                 if (err) {
                     res.send(err);

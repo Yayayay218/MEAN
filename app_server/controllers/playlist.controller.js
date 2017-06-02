@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
+var fs = require('fs');
 
 var Playlists = mongoose.model('Playlists');
 
@@ -27,7 +28,7 @@ var upload = multer({
 //  POST a playlist
 module.exports.playlistPost = function (req, res) {
     upload(req, res, function (err) {
-        if(err){
+        if (err) {
             res.json({error_code: 1, err_desc: err});
             return;
         }
@@ -38,7 +39,7 @@ module.exports.playlistPost = function (req, res) {
             playlist.key = req.body.key;
             playlist.coverPhoto = img.filename;
             playlist.save(function (err, playlist) {
-                if(err)
+                if (err)
                     sendJSONresponse(res, 400, err);
                 else
                     sendJSONresponse(res, 201, playlist);
@@ -56,5 +57,27 @@ module.exports.playlistGetAll = function (req, res) {
         else {
             sendJSONresponse(res, 200, {'data': playlist});
         }
-    });
+    })
+        .sort({name: 'asc'});
 };
+
+//  DEL a playlist
+module.exports.playlistDel = function (req, res) {
+    var playlistID = req.params.playlistID;
+    if (playlistID) {
+        Playlists.findByIdAndRemove(playlistID, function (err, playlist) {
+            if (err) {
+                sendJSONresponse(res, 404, err);
+            }
+            else {
+                var filePath = 'app_server/uploads/playlists/' + playlist.coverPhoto;
+                fs.unlink(filePath);
+                sendJSONresponse(res, 204, {'message': 'success'});
+            }
+
+        });
+    } else {
+        sendJSONresponse(res, 404, {'message': 'Not found categoryID'});
+    }
+};
+
