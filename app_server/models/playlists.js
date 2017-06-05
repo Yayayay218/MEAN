@@ -1,4 +1,6 @@
 var mongoose = require('mongoose'), Schema = mongoose.Schema;
+var mongoosePaginate = require('mongoose-paginate');
+
 var playlistsSchema = new mongoose.Schema({
     name: {
         type: String
@@ -15,5 +17,6 @@ var playlistsSchema = new mongoose.Schema({
     },
     updateAt: Date
 });
+playlistsSchema.plugin(mongoosePaginate);
 
 mongoose.model('Playlists', playlistsSchema);

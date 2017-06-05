@@ -6,13 +6,14 @@ var ctrlPlaylist = require('../controllers/playlist.controller');
 
 //  Category APIs
 router.post('/category', ctrlCategory.categoryPost);
-router.get('/categories', ctrlCategory.categoryGetAll);
-router.put('/category/:categoryID', ctrlCategory.categoryPut);
-router.delete('/category/:categoryID', ctrlCategory.categoryDel);
+router.get('/category', ctrlCategory.categoryGetAll);
+router.get('/category/:id', ctrlCategory.categoryGetOne);
+router.put('/category/:id', ctrlCategory.categoryPut);
+router.delete('/category/:id', ctrlCategory.categoryDel);
 
 //  Playlist APIs
 router.post('/playlist', ctrlPlaylist.playlistPost);
-router.get('/playlists', ctrlPlaylist.playlistGetAll);
+router.get('/playlist', ctrlPlaylist.playlistGetAll);
 router.delete('/playlist/:playlistID', ctrlPlaylist.playlistDel);
 router.put('/playlist/:playlistID', ctrlPlaylist.playlistPut);
 

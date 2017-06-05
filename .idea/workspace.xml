@@ -2,12 +2,304 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1b001ce-a3b9-42fa-9852-10400ba074de" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_client/admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_client/categories/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_client/rest/restClient.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack.config.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/angular-loader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/angular-loader.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/angular-loader.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-loader/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/ngAnimateMock.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/ngMock.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/ngMockE2E.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-mocks/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/angular-route.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/angular-route.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/angular-route.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-route/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/release/angular-ui-router.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/release/angular-ui-router.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/resolve.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/state.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/stateDirectives.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/stateFilters.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/templateFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/urlMatcherFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/urlRouter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/view.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/viewDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular-ui-router/src/viewScroll.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/angular-csp.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/angular.min.js.gzip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/angular/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/.jscsrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/apple-touch-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/browserconfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/crossdomain.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/css/normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/TOC.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/css.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/extend.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/faq.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/html.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/js.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/misc.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/doc/usage.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/humans.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/img/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/js/plugins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/js/vendor/jquery-1.12.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/tile-wide.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/dist/tile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/apple-touch-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/browserconfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/crossdomain.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/TOC.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/css.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/extend.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/faq.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/html.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/js.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/misc.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/doc/usage.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/humans.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/img/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/js/plugins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/js/vendor/modernizr-2.8.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/tile-wide.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/src/tile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/test/file_content.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/html5-boilerplate/test/file_existence.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/MIT-LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/dist/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/dist/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/dist/jquery.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/jsonp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/load.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/parseJSON.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/parseXML.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/var/nonce.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/var/rquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/ajax/xhr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/attributes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/attributes/attr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/attributes/classes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/attributes/prop.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/attributes/support.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/attributes/val.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/callbacks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/core/access.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/core/init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/core/parseHTML.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/core/ready.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/core/var/rsingleTag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/addGetHookIf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/curCSS.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/defaultDisplay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/hiddenVisibleSelectors.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/support.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/swap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/var/cssExpand.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/var/getStyles.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/var/isHidden.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/var/rmargin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/css/var/rnumnonpx.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/data/Data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/data/accepts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/data/var/data_priv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/data/var/data_user.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/deferred.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/deprecated.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/dimensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/effects.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/effects/Tween.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/effects/animatedSelector.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/event.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/event/ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/event/alias.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/event/support.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/exports/amd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/exports/global.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/intro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/manipulation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/manipulation/_evalUrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/manipulation/support.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/manipulation/var/rcheckableType.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/offset.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/outro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/queue.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/queue/delay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/selector-native.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/selector-sizzle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/selector.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/serialize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/sizzle/dist/sizzle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/sizzle/dist/sizzle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/sizzle/dist/sizzle.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/traversing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/traversing/findFilter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/traversing/var/rneedsContext.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/arr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/class2type.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/concat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/hasOwn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/indexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/pnum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/push.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/rnotwhite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/slice.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/strundefined.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/support.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/var/toString.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/jQuery/src/wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/ngStorage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/ngStorage.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/ngstorage/package.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/gulpfile-wrap-template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/ie9.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/loader-animation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/default-params.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/handle-click.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/handle-dom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/handle-key.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/handle-swal-dom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/injected-html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/set-params.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/modules/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/sweetalert.es6.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dev/sweetalert.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dist/sweetalert-dev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dist/sweetalert.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/dist/sweetalert.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/example.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/example.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/logo_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/logo_big@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/logo_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/logo_small@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/te-logo-small.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/thumbs-up.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/vs_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/example/images/vs_icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/default-params.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/handle-click.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/handle-dom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/handle-key.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/handle-swal-dom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/injected-html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/set-params.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/modules/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/lib/sweetalert.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/sweetalert.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/test/tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/themes/facebook/facebook.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/themes/facebook/facebook.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/themes/google/google.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/themes/google/google.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/themes/twitter/twitter.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/assets/bower_components/sweetalert/themes/twitter/twitter.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_client/views/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/controllers/category.controller.js" afterPath="$PROJECT_DIR$/app_server/controllers/category.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/controllers/playlist.controller.js" afterPath="$PROJECT_DIR$/app_server/controllers/playlist.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/categories.js" afterPath="$PROJECT_DIR$/app_server/models/categories.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/playlists.js" afterPath="$PROJECT_DIR$/app_server/models/playlists.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/routes/index.js" afterPath="$PROJECT_DIR$/app_server/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,32 +314,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="category.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="category.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-552">
-              <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+            <state relative-caret-position="274">
+              <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_client/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_server/routes/index.js">
+        <entry file="file://$PROJECT_DIR$/app_client/categories/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playlist.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_server/controllers/playlist.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="104" column="58" lean-forward="true" selection-start-line="104" selection-start-column="58" selection-end-line="104" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="312">
+              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,9 +349,21 @@
       <file leaf-file-name="categories.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/models/categories.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="288">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restClient.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_client/rest/restClient.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="111" column="24" lean-forward="true" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#148#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,6 +378,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>data</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>let</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -80,15 +394,21 @@
       <list>
         <option value="$PROJECT_DIR$/.bowerrc" />
         <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app_client/views/index.html" />
         <option value="$PROJECT_DIR$/app_server/models/db.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/public/js/bundle.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/app_server/routes/index.js" />
-        <option value="$PROJECT_DIR$/app_server/models/playlists.js" />
-        <option value="$PROJECT_DIR$/app_server/models/categories.js" />
-        <option value="$PROJECT_DIR$/app_server/controllers/category.controller.js" />
+        <option value="$PROJECT_DIR$/views/admin.html" />
         <option value="$PROJECT_DIR$/app_server/controllers/playlist.controller.js" />
+        <option value="$PROJECT_DIR$/app_server/models/playlists.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app_server/routes/index.js" />
+        <option value="$PROJECT_DIR$/app_client/admin.js" />
+        <option value="$PROJECT_DIR$/app_server/models/categories.js" />
+        <option value="$PROJECT_DIR$/app_client/categories/index.js" />
+        <option value="$PROJECT_DIR$/app_server/controllers/category.controller.js" />
+        <option value="$PROJECT_DIR$/app_client/rest/restClient.js" />
       </list>
     </option>
   </component>
@@ -125,6 +445,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,7 +469,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="app_server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -162,6 +484,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -183,10 +509,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,12 +571,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app_client" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app_server/routes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app_server" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app_server/routes" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -297,24 +673,30 @@
       <updated>1496272873715</updated>
       <workItem from="1496272874976" duration="8214000" />
       <workItem from="1496357331229" duration="2771000" />
-      <workItem from="1496365499877" duration="4729000" />
+      <workItem from="1496365499877" duration="8005000" />
+      <workItem from="1496375161569" duration="432000" />
+      <workItem from="1496377800023" duration="14256000" />
+      <workItem from="1496452543150" duration="8140000" />
+      <workItem from="1496460985626" duration="4843000" />
+      <workItem from="1496625542213" duration="4763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15714000" />
+    <option name="totallyTimeSpent" value="51424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17521834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17521834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27405858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28242677" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -335,8 +717,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28242677" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17521834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -358,6 +740,150 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1968">
+          <caret line="82" column="2" lean-forward="true" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/categories/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/rest/restClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2472">
+          <caret line="112" column="45" lean-forward="false" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/rest/restClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/rest/restClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2664">
+          <caret line="120" column="65" lean-forward="true" selection-start-line="120" selection-start-column="65" selection-end-line="120" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/categories/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/models/categories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/models/categories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
           <folding />
@@ -368,7 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -384,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -392,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1776">
           <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -408,7 +931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
           <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -416,7 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -432,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -440,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -459,28 +978,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_client/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/views/index.html" />
     <entry file="file://$PROJECT_DIR$/app_server/models/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -488,58 +986,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/uploads/playlists/file-1496367965110.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/uploads/playlists/file-1496367678360.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/uploads/playlists/file-1496367995132.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/app_server/uploads/playlists/file-1496367965110.jpeg" />
+    <entry file="file://$PROJECT_DIR$/app_server/uploads/playlists/file-1496367678360.jpeg" />
+    <entry file="file://$PROJECT_DIR$/app_server/uploads/playlists/file-1496367995132.jpeg" />
+    <entry file="file://$PROJECT_DIR$/public/js/bundle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="454" column="144" lean-forward="false" selection-start-line="454" selection-start-column="144" selection-end-line="454" selection-end-column="144" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/models/categories.js">
+    <entry file="file://$PROJECT_DIR$/views/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="192">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_server/models/playlists.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="456">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_server/controllers/playlist.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="104" column="58" lean-forward="true" selection-start-line="104" selection-start-column="58" selection-end-line="104" selection-end-column="58" />
+        <state relative-caret-position="274">
+          <caret line="84" column="50" lean-forward="true" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/categories/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_server/controllers/category.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        <state relative-caret-position="274">
+          <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/models/categories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_client/rest/restClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="111" column="24" lean-forward="true" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#148#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

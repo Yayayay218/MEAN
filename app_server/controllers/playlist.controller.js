@@ -55,7 +55,7 @@ module.exports.playlistGetAll = function (req, res) {
             sendJSONresponse(res, 404, err)
         }
         else {
-            sendJSONresponse(res, 200, {'data': playlist});
+            sendJSONresponse(res, 200, playlist);
         }
     })
         .sort({name: 'asc'});
