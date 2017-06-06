@@ -12,8 +12,6 @@ var sendJSONresponse = function (res, status, content) {
 module.exports.categoryPost = function (req, res) {
     var category = new Categories();
     category.name = req.body.name;
-    category.playlists = req.body.playlist;
-    category.createAt = category.createAt.toString();
     category.save(function (err, category) {
         if (err)
             sendJSONresponse(res, 400, err);
@@ -30,12 +28,13 @@ module.exports.categoryGetAll = function (req, res) {
     delete req.query.page;
     const limit = Number(req.query.limit);
     delete req.query.limit;
+    const sort = req.query.sort;
     delete req.query.sort;
 
     Categories.paginate(
         query,
         {
-            populate: 'playlists',
+            sort: sort,
             page: page,
             limit: limit
         },
@@ -58,9 +57,8 @@ module.exports.categoryGetAll = function (req, res) {
 //  GET a category
 module.exports.categoryGetOne = function (req, res) {
     Categories.findById(req.params.id)
-        .populate('playlists')
         .exec(function (err, category) {
-            if(err)
+            if (err)
                 sendJSONresponse(res, 404, err);
             else
                 sendJSONresponse(res, 200, {'data': category})
@@ -92,7 +90,6 @@ module.exports.categoryPut = function (req, res) {
                 return;
             }
             category.name = req.body.name;
-            category.playlists = req.body.playlist;
             category.updateAt = Date.now();
 
             category.save(function (err, category) {

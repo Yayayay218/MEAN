@@ -65,11 +65,11 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
                 break;
 
             }
-            // case GET_MANY: {
-            //   const query = {'ids': params.ids};
-            //   url = `${apiUrl}/${resource}?${fetchUtils.queryParameters(query)}`;
-            //   break;
-            // }
+            case GET_MANY: {
+              const query = {'ids': params.ids};
+              url = `${apiUrl}/${resource}?${fetchUtils.queryParameters(query)}`;
+              break;
+            }
             case UPDATE: {
                 url = `${apiUrl}/${resource}/${params.id}`;
                 options.method = 'PUT';
@@ -112,11 +112,11 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
             case UPDATE:
                 return {data: {...json.data, id: json.data._id}};
             case DELETE:
-                return;
-            // case GET_MANY:
-            //     return {
-            //         data : json.data.map(x => ({...x, id: x._id}))
-            //     }
+                return {data: {...json.data, id: json.data._id}};
+            case GET_MANY:
+                return {
+                    data : json.data.map(x => ({...x, id: x._id}))
+                };
             default:
                 return {data: {...json.data, id: json.data._id}};
         }

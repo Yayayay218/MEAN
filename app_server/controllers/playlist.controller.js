@@ -37,12 +37,13 @@ module.exports.playlistPost = function (req, res) {
             var playlist = new Playlists();
             playlist.name = req.body.name;
             playlist.key = req.body.key;
-            playlist.coverPhoto = img.filename;
+            playlist.coverPhoto = img.filename || req.body.coverPhoto;
+            playlist.category = req.body.category;
             playlist.save(function (err, playlist) {
                 if (err)
                     sendJSONresponse(res, 400, err);
                 else
-                    sendJSONresponse(res, 201, playlist);
+                    sendJSONresponse(res, 201, {'data': playlist});
             })
         }
     })
@@ -50,29 +51,62 @@ module.exports.playlistPost = function (req, res) {
 
 //  GET All Playlists
 module.exports.playlistGetAll = function (req, res) {
-    Playlists.find(function (err, playlist) {
-        if (err) {
-            sendJSONresponse(res, 404, err)
-        }
-        else {
-            sendJSONresponse(res, 200, playlist);
-        }
-    })
-        .sort({name: 'asc'});
+    var query = req.query || {};
+
+    const page = Number(req.query.page);
+    delete req.query.page;
+    const limit = Number(req.query.limit);
+    delete req.query.limit;
+    const sort = req.query.sort;
+    delete req.query.sort;
+
+    Playlists.paginate(
+        query,
+        {
+            sort: sort,
+            populate: 'category',
+            page: page,
+            limit: limit
+        },
+        function (err, category) {
+            if (err)
+                sendJSONresponse(res, 404, err);
+            else {
+                var results = {
+                    data: category.docs,
+                    total: category.total,
+                    limit: category.limit,
+                    page: category.page,
+                    pages: category.pages
+                };
+                sendJSONresponse(res, 200, results);
+            }
+        })
 };
 
+//  GET a playlist
+module.exports.playlistGetOne = function (req, res) {
+    Playlists.findById(req.params.id)
+        .populate('category')
+        .exec(function (err, playlist) {
+            if (err)
+                sendJSONresponse(res, 404, err);
+            else
+                sendJSONresponse(res, 200, {'data': playlist})
+        })
+};
 //  DEL a playlist
 module.exports.playlistDel = function (req, res) {
-    var playlistID = req.params.playlistID;
+    var playlistID = req.params.id;
     if (playlistID) {
         Playlists.findByIdAndRemove(playlistID, function (err, playlist) {
             if (err) {
                 sendJSONresponse(res, 404, err);
             }
             else {
-                var filePath = 'app_server/uploads/playlists/' + playlist.coverPhoto;
-                fs.unlink(filePath);
-                sendJSONresponse(res, 204, {'message': 'success'});
+                // var filePath = 'app_server/uploads/playlists/' + playlist.coverPhoto;
+                // fs.unlink(filePath);
+                sendJSONresponse(res, 204, {data: playlist});
             }
 
         });
@@ -83,7 +117,7 @@ module.exports.playlistDel = function (req, res) {
 
 //  PUT a playlist
 module.exports.playlistPut = function (req, res) {
-    var playlistID = req.params.playlistID;
+    var playlistID = req.params.id;
     if (playlistID) {
         Playlists.findById(playlistID, function (err, playlist) {
             if (err) {
@@ -98,12 +132,12 @@ module.exports.playlistPut = function (req, res) {
                     }
                     else {
                         if (req.file) {
-                            var filePath = 'app_server/uploads/playlists/' + playlist.coverPhoto;
                             var img = req.file || {};
                             playlist.name = req.body.name;
                             playlist.key = req.body.key;
                             playlist.type = req.body.type;
-                            playlist.coverPhoto = img.filename;
+                            playlist.coverPhoto = img.filename || req.body.coverPhoto;
+                            playlist.category = req.body.category;
                             playlist.updateAt = Date.now();
 
                             playlist.save(function (err, playlist) {
@@ -111,8 +145,7 @@ module.exports.playlistPut = function (req, res) {
                                     sendJSONresponse(res, 400, err);
                                 }
                                 else {
-                                    fs.unlink(filePath);
-                                    sendJSONresponse(res, 201, playlist);
+                                    sendJSONresponse(res, 201, {'data': playlist});
                                 }
                             });
                         }
@@ -120,6 +153,7 @@ module.exports.playlistPut = function (req, res) {
                             playlist.name = req.body.name;
                             playlist.key = req.body.key;
                             playlist.type = req.body.type;
+                            playlist.category = req.body.category;
                             playlist.updateAt = Date.now();
 
                             playlist.save(function (err, playlist) {
@@ -127,7 +161,7 @@ module.exports.playlistPut = function (req, res) {
                                     sendJSONresponse(res, 400, err);
                                 }
                                 else {
-                                    sendJSONresponse(res, 201, playlist);
+                                    sendJSONresponse(res, 201, {'data': playlist});
                                 }
                             });
                         }

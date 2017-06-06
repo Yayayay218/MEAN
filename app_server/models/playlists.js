@@ -1,4 +1,5 @@
 var mongoose = require('mongoose'), Schema = mongoose.Schema;
+var autoIncre = require('mongoose-sequence');
 var mongoosePaginate = require('mongoose-paginate');
 
 var playlistsSchema = new mongoose.Schema({
@@ -15,8 +16,13 @@ var playlistsSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    updateAt: Date
+    updateAt: Date,
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Categories'
+    }
 });
 playlistsSchema.plugin(mongoosePaginate);
+playlistsSchema.plugin(autoIncre, {inc_field: 'playlist_id'});
 
 mongoose.model('Playlists', playlistsSchema);
