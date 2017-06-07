@@ -16,6 +16,9 @@ import {
     DeleteButton
 } from 'admin-on-rest';
 
+import {required} from 'admin-on-rest'
+
+
 export const CategoryList = (props) => (
     <List {...props}>
         <Datagrid>
@@ -29,10 +32,11 @@ export const CategoryList = (props) => (
     </List>
 );
 
+
 export const CategoryCreate = (props) => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="name"/>
+            <TextInput source="name" validate={[required]}/>
         </SimpleForm>
     </Create>
 );
@@ -43,7 +47,7 @@ export  const CategoryEdit = (props) => (
     <Edit title={<CategoryTitle />} {...props}>
         <SimpleForm>
             <DisabledInput label="Category Id" source="cate_id" />
-            <TextInput source="name" label="Category Name" />
+            <TextInput source="name" label="Category Name" validate={[required]}/>
         </SimpleForm>
     </Edit>
 );

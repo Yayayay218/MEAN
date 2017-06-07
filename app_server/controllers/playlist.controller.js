@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 var fs = require('fs');
+var gm = require('gm').subClass({imageMagick: true});
 
 var Playlists = mongoose.model('Playlists');
 
@@ -40,8 +41,17 @@ module.exports.playlistPost = function (req, res) {
             playlist.save(function (err, playlist) {
                 if (err)
                     sendJSONresponse(res, 400, err);
-                else
+                else {
+                    console.log(playlist.coverPhoto.substring(22));
+                    gm('app_server/'+playlist.coverPhoto.substring(22))
+                        .resize('144', '144')
+                        .autoOrient()
+                        .write('app_server/'+playlist.coverPhoto.substring(22), function (err) {
+                            if (err)
+                                console.log(err);
+                        });
                     sendJSONresponse(res, 201, {'data': playlist});
+                }
             })
         }
     })
@@ -125,8 +135,10 @@ module.exports.playlistPut = function (req, res) {
                 if (err)
                     sendJSONresponse(res, 400, err);
                 else {
-                    if (playlist)
+                    if (playlist) {
+                        playlist.updateAt = Date.now();
                         sendJSONresponse(res, 201, {'data': playlist});
+                    }
                     else
                         sendJSONresponse(res, 404, {'message': 'not found this playlist'})
                 }

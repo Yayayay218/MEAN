@@ -23,6 +23,7 @@ import {
     TabbedForm
 } from 'admin-on-rest';
 
+import {required} from 'admin-on-rest'
 
 export const PlaylistList = (props) => (
     <List {...props}>
@@ -42,17 +43,14 @@ export const PlaylistList = (props) => (
     </List>
 );
 
-const nameRequired = value => value ? undefined : 'Name is required';
-const keyRequired = value => value ? undefined : 'Key is required';
-const categoryRequired = value => value ? undefined : 'Category is required';
-
 export const PlaylistCreate = (props) => (
     <Create {...props}>
         <TabbedForm>
             <FormTab label="Information">
-                <TextInput source="name" validate={nameRequired}/>
-                <TextInput source="key" validate={keyRequired}/>
-                <ReferenceInput label="Category" source="category" reference="category" validate={categoryRequired} allowEmpty>
+                <TextInput source="name" validate={[required]}/>
+                <TextInput source="key" validate={[required]}/>
+                <ReferenceInput label="Category" source="category" reference="category" validate={[required]}
+                                allowEmpty>
                     <SelectInput optionText="name"/>
                 </ReferenceInput>
             </FormTab>
@@ -89,14 +87,14 @@ export const PlaylistEdit = (props) => (
     <Edit title={<PlaylistTitle />} {...props}>
         <TabbedForm>
             <FormTab label="Information">
-                <TextInput source="name"/>
-                <TextInput source="key"/>
+                <TextInput source="name" validate={[required]}/>
+                <TextInput source="key" validate={[required]}/>
                 <SelectInput source="type" choices={[
                     {id: 0, name: 0},
                     {id: 1, name: 1}
                 ]}/>
                 <ReferenceInput label="Category" source="category._id" reference="category" allowEmpty>
-                    <SelectInput optionText="name"/>
+                    <SelectInput optionText="name" validate={[required]}/>
                 </ReferenceInput>
             </FormTab>
             <FormTab label="Cover Photo">
