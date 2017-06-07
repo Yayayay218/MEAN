@@ -4,9 +4,11 @@ var mongoosePaginate = require('mongoose-paginate');
 
 var playlistsSchema = new mongoose.Schema({
     name: {
-        type: String
+        type: String,
     },
-    key: String,
+    key:{
+        type: String,
+    },
     coverPhoto: String,
     type: {
         type: Number,
@@ -19,7 +21,7 @@ var playlistsSchema = new mongoose.Schema({
     updateAt: Date,
     category: {
         type: Schema.Types.ObjectId,
-        ref: 'Categories'
+        ref: 'Categories',
     }
 });
 playlistsSchema.plugin(mongoosePaginate);

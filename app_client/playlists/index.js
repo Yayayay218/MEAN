@@ -23,6 +23,7 @@ import {
     TabbedForm
 } from 'admin-on-rest';
 
+
 export const PlaylistList = (props) => (
     <List {...props}>
         <Datagrid>
@@ -41,20 +42,24 @@ export const PlaylistList = (props) => (
     </List>
 );
 
+const nameRequired = value => value ? undefined : 'Name is required';
+const keyRequired = value => value ? undefined : 'Key is required';
+const categoryRequired = value => value ? undefined : 'Category is required';
+
 export const PlaylistCreate = (props) => (
     <Create {...props}>
         <TabbedForm>
             <FormTab label="Information">
-                <TextInput source="name"/>
-                <TextInput source="key"/>
-                <ReferenceInput label="Category" source="category" reference="category" allowEmpty>
+                <TextInput source="name" validate={nameRequired}/>
+                <TextInput source="key" validate={keyRequired}/>
+                <ReferenceInput label="Category" source="category" reference="category" validate={categoryRequired} allowEmpty>
                     <SelectInput optionText="name"/>
                 </ReferenceInput>
             </FormTab>
 
             <FormTab label="Cover Photo">
                 <ImageInput source="file" label="Cover Photo" accept="image/*">
-                    <ImageField source="file" title="title"/>
+                    <ImageField source="src" title="title"/>
                 </ImageInput>
             </FormTab>
         </TabbedForm>
@@ -63,7 +68,7 @@ export const PlaylistCreate = (props) => (
 
 export const ImageFormatter = v => {
     // console.log("====LogoFormatter=====: ", v);
-    if (typeof v === 'object'){
+    if (typeof v === 'object') {
         return v;
     }
     const imageObj = {
@@ -94,9 +99,9 @@ export const PlaylistEdit = (props) => (
                     <SelectInput optionText="name"/>
                 </ReferenceInput>
             </FormTab>
-
             <FormTab label="Cover Photo">
-                <ImageInput source="file" label="Cover Photo" accept="image/*" format={ImageFormatter} parse={ImageParser}>
+                <ImageField source='coverPhoto' title='title'/>
+                <ImageInput source="file" label="Cover Photo" accept="image/*">
                     <ImageField source="src" title="title"/>
                 </ImageInput>
             </FormTab>

@@ -27,18 +27,16 @@ var upload = multer({
 
 //  POST a playlist
 module.exports.playlistPost = function (req, res) {
+    var data = req.body;
+
     upload(req, res, function (err) {
         if (err) {
             res.json({error_code: 1, err_desc: err});
             return;
         }
         else {
-            var img = req.file || {};
-            var playlist = new Playlists();
-            playlist.name = req.body.name;
-            playlist.key = req.body.key;
-            playlist.coverPhoto = img.filename || req.body.coverPhoto;
-            playlist.category = req.body.category;
+            var playlist = new Playlists(data);
+
             playlist.save(function (err, playlist) {
                 if (err)
                     sendJSONresponse(res, 400, err);
@@ -117,60 +115,23 @@ module.exports.playlistDel = function (req, res) {
 
 //  PUT a playlist
 module.exports.playlistPut = function (req, res) {
-    var playlistID = req.params.id;
-    if (playlistID) {
-        Playlists.findById(playlistID, function (err, playlist) {
-            if (err) {
-                res.send(err);
-                return;
-            }
-            else {
-                upload(req, res, function (err) {
-                    if (err) {
-                        res.json({error_code: 1, err_desc: err});
-                        return;
-                    }
-                    else {
-                        if (req.file) {
-                            var img = req.file || {};
-                            playlist.name = req.body.name;
-                            playlist.key = req.body.key;
-                            playlist.type = req.body.type;
-                            playlist.coverPhoto = img.filename || req.body.coverPhoto;
-                            playlist.category = req.body.category;
-                            playlist.updateAt = Date.now();
+    var data = req.body;
+    upload(req, res, function (err) {
+        if (err) {
+            return res.json({error_code: 1, err_desc: err});
+        }
+        else
+            Playlists.findOneAndUpdate({_id: req.params.id}, data, function (err, playlist) {
+                if (err)
+                    sendJSONresponse(res, 400, err);
+                else {
+                    if (playlist)
+                        sendJSONresponse(res, 201, {'data': playlist});
+                    else
+                        sendJSONresponse(res, 404, {'message': 'not found this playlist'})
+                }
+            })
+    })
 
-                            playlist.save(function (err, playlist) {
-                                if (err) {
-                                    sendJSONresponse(res, 400, err);
-                                }
-                                else {
-                                    sendJSONresponse(res, 201, {'data': playlist});
-                                }
-                            });
-                        }
-                        else {
-                            playlist.name = req.body.name;
-                            playlist.key = req.body.key;
-                            playlist.type = req.body.type;
-                            playlist.category = req.body.category;
-                            playlist.updateAt = Date.now();
-
-                            playlist.save(function (err, playlist) {
-                                if (err) {
-                                    sendJSONresponse(res, 400, err);
-                                }
-                                else {
-                                    sendJSONresponse(res, 201, {'data': playlist});
-                                }
-                            });
-                        }
-                    }
-                });
-            }
-        })
-    } else {
-        sendJSONresponse(res, 404, {'message': 'Not found playlistID'});
-    }
 };
 
