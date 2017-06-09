@@ -49,3 +49,4 @@ process.on('SIGTERM', function () {
 require('./categories');
 require('./playlists');
 require('./keywords');
+require('./notification');
