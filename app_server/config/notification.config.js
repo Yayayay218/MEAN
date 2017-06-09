@@ -21,28 +21,41 @@ var note = new apn.Notification();
 note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now.
 note.badge = 1;
 note.sound = "default";
-note.body = 'xxx';
-note.title = 'aaaa';
 
 var rule = new schedule.RecurrenceRule();
 
+note.body = 'Link ';
+note.title = 'Message ';
+rule.hour = 0;
+rule.minute = 25;
 //  Config Pushing Time Daily
-// Notifications.findById('593a1b0eac9aae36478c07b9', function (err, notification) {
-//     note.body = 'Link ' + notification.link;
-//     note.title = 'Message ' + notification.message + ' at ' + notification.hour + '-' + notification.minute;
-//     rule.hour = notification.hour;
-//     rule.minute = notification.minute;
+// Notifications.find(function (err, notification) {
+//     if (err)
+//         console.log(err);
+//     else {
+//         for(var i=0; i<notification.length; i++) {
+//             note.body = 'Link ' + notification[i].link;
+//             note.title = 'Message ' + notification[i].message;
+//             rule.hour = notification[i].hour;
+//             rule.minute = notification[i].minute;
+//             schedule.scheduleJob(rule, function () {
+//                 apnProvider.send(note, deviceToken).then(function (result) {
+//                     console.log(result);
+//                 });
+//             });
+//         }
+//     }
 // });
-
 
 // schedule.scheduleJob(rule, function () {
 //     apnProvider.send(note, deviceToken).then(function (result) {
 //         console.log(result);
 //     });
 // });
-// apnProvider.send(note, deviceToken).then(function (result) {
-//     console.log(result);
-// });
+
+
+
+
 
 
 

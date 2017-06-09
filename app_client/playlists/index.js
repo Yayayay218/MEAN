@@ -7,6 +7,7 @@ import {
     DisabledInput,
     TextInput,
     DateInput,
+    NumberInput,
     LongTextInput,
     ReferenceField,
     ReferenceManyField,
@@ -49,7 +50,7 @@ export const PlaylistCreate = (props) => (
             <FormTab label="Information">
                 <TextInput source="name" validate={[required]}/>
                 <TextInput source="key" validate={[required]}/>
-                <TextInput source="type" validate={[required, minValue(1), maxValue(10)]}/>
+                <NumberInput source="type" validate={[required, minValue(1), maxValue(10)]}/>
 
                 <ReferenceInput label="Category" source="category" reference="category" validate={[required]}
                                 allowEmpty>
@@ -91,7 +92,7 @@ export const PlaylistEdit = (props) => (
             <FormTab label="Information">
                 <TextInput source="name" validate={[required]}/>
                 <TextInput source="key" validate={[required]}/>
-                <TextInput source="type" validate={[required, minValue(1), maxValue(10)]}/>
+                <NumberInput source="type" validate={[required, minValue(1), maxValue(10)]}/>
 
                 <ReferenceInput label="Category" source="category._id" reference="category" allowEmpty>
                     <SelectInput optionText="name" validate={[required]}/>

@@ -5,6 +5,7 @@ import {
     List,
     SimpleForm,
     DisabledInput,
+    NumberInput,
     TextInput,
     DateInput,
     LongTextInput,
@@ -16,8 +17,7 @@ import {
     DeleteButton
 } from 'admin-on-rest';
 
-import {required} from 'admin-on-rest';
-
+import {required, minValue, maxValue} from 'admin-on-rest';
 
 export const NotificationsList = (props) => (
     <List {...props}>
@@ -41,8 +41,8 @@ export const NotificationsCreate = (props) => (
         <SimpleForm>
             <TextInput source="message" label='Notification Message' validate={[required]}/>
             <TextInput source="link" label="Notification Link" validate={[required]}/>
-            <TextInput source="hour" label="Set daily hour" validate={[required]}/>
-            <TextInput source="minute" label="Set daily minute" validate={[required]}/>
+            <NumberInput source="hour" label="Set daily hour" validate={[required, minValue(1), maxValue(24)]}/>
+            <NumberInput source="minute" label="Set daily minute" validate={[required, minValue(0), maxValue(59)]}/>
         </SimpleForm>
     </Create>
 );
@@ -55,8 +55,8 @@ export const NotificationsEdit = (props) => (
             <DisabledInput label="Notification Id" source="notification_id"/>
             <TextInput source="message" label="Notification Message" validate={[required]}/>
             <TextInput source="link" label="Notification Link" validate={[required]}/>
-            <TextInput source="hour" label="Set daily hour" validate={[required]}/>
-            <TextInput source="minute" label="Set daily minute" validate={[required]}/>
+            <NumberInput source="hour" label="Set daily hour" validate={[required, minValue(1), maxValue(24)]}/>
+            <NumberInput source="minute" label="Set daily minute" validate={[required, minValue(0), maxValue(59)]}/>
         </SimpleForm>
     </Edit>
 );
