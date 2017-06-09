@@ -6,6 +6,7 @@ import {
 
 import {CategoryList, CategoryCreate, CategoryEdit} from './categories/index';
 import {PlaylistList, PlaylistCreate, PlaylistEdit} from './playlists/index';
+import {KeywordCreate, KeywordEdit, KeywordList} from './keywords/index'
 import {Dashboard} from './dashboard';
 
 //  Import REST APIs
@@ -28,6 +29,7 @@ render(
     <Admin dashboard={Dashboard} restClient={uploadCapableClient} title="My Dashboard">
         <Resource name="category" list={CategoryList} edit={CategoryEdit} create={CategoryCreate} remove={Delete}/>
         <Resource name="playlist" list={PlaylistList} edit={PlaylistEdit} create={PlaylistCreate} remove={Delete}/>
+        <Resource name="keyword" list={KeywordList} edit={KeywordEdit} create={KeywordCreate} remove={Delete}/>
     </Admin>,
     document.getElementById('root')
 );

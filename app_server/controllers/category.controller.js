@@ -15,8 +15,9 @@ module.exports.categoryPost = function (req, res) {
     category.save(function (err, category) {
         if (err)
             sendJSONresponse(res, 400, err);
-        else
+        else{
             sendJSONresponse(res, 201, {'data': category});
+        }
     })
 };
 

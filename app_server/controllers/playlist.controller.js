@@ -41,12 +41,12 @@ module.exports.playlistPost = function (req, res) {
             playlist.save(function (err, playlist) {
                 if (err)
                     sendJSONresponse(res, 400, err);
+                else if (!playlist.coverPhoto)
+                    sendJSONresponse(res, 201, {'data': playlist});
                 else {
-                    console.log(playlist.coverPhoto.substring(22));
-                    gm('app_server/'+playlist.coverPhoto.substring(22))
+                    gm('app_server/' + playlist.coverPhoto.substring(22))
                         .resize('144', '144')
-                        .autoOrient()
-                        .write('app_server/'+playlist.coverPhoto.substring(22), function (err) {
+                        .write('app_server/' + playlist.coverPhoto.substring(22), function (err) {
                             if (err)
                                 console.log(err);
                         });
@@ -112,8 +112,8 @@ module.exports.playlistDel = function (req, res) {
                 sendJSONresponse(res, 404, err);
             }
             else {
-                // var filePath = 'app_server/uploads/playlists/' + playlist.coverPhoto;
-                // fs.unlink(filePath);
+                var filePath = 'app_server/' + playlist.coverPhoto.substring(22);
+                fs.unlink(filePath);
                 sendJSONresponse(res, 204, {data: playlist});
             }
 
@@ -125,6 +125,7 @@ module.exports.playlistDel = function (req, res) {
 
 //  PUT a playlist
 module.exports.playlistPut = function (req, res) {
+    req.body.updateAt = Date.now();
     var data = req.body;
     upload(req, res, function (err) {
         if (err) {
@@ -136,7 +137,17 @@ module.exports.playlistPut = function (req, res) {
                     sendJSONresponse(res, 400, err);
                 else {
                     if (playlist) {
-                        playlist.updateAt = Date.now();
+                        if (playlist.coverPhoto && playlist.coverPhoto !== req.body.coverPhoto) {
+                            var filePath = 'app_server/' + playlist.coverPhoto.substring(22);
+                            fs.unlink(filePath);
+                        }
+                        else if (req.body.coverPhoto)
+                            gm('app_server/' + req.body.coverPhoto.substring(22))
+                                .resize('144', '144')
+                                .write('app_server/' + req.body.coverPhoto.substring(22), function (err) {
+                                    if (err)
+                                        console.log(err);
+                                });
                         sendJSONresponse(res, 201, {'data': playlist});
                     }
                     else

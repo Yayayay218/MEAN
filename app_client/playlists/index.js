@@ -23,7 +23,7 @@ import {
     TabbedForm
 } from 'admin-on-rest';
 
-import {required} from 'admin-on-rest'
+import {required, minValue, maxValue} from 'admin-on-rest';
 
 export const PlaylistList = (props) => (
     <List {...props}>
@@ -49,6 +49,8 @@ export const PlaylistCreate = (props) => (
             <FormTab label="Information">
                 <TextInput source="name" validate={[required]}/>
                 <TextInput source="key" validate={[required]}/>
+                <TextInput source="type" validate={[required, minValue(1), maxValue(10)]}/>
+
                 <ReferenceInput label="Category" source="category" reference="category" validate={[required]}
                                 allowEmpty>
                     <SelectInput optionText="name"/>
@@ -89,10 +91,8 @@ export const PlaylistEdit = (props) => (
             <FormTab label="Information">
                 <TextInput source="name" validate={[required]}/>
                 <TextInput source="key" validate={[required]}/>
-                <SelectInput source="type" choices={[
-                    {id: 0, name: 0},
-                    {id: 1, name: 1}
-                ]}/>
+                <TextInput source="type" validate={[required, minValue(1), maxValue(10)]}/>
+
                 <ReferenceInput label="Category" source="category._id" reference="category" allowEmpty>
                     <SelectInput optionText="name" validate={[required]}/>
                 </ReferenceInput>
