@@ -1,0 +1,3 @@
+babel_cache
+node_modules
+app_server/uploads/*
