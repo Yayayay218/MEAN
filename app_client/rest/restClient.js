@@ -98,8 +98,8 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
 
     const convertHTTPResponseToREST = (response, type, resource, params) => {
         const {headers, json} = response;
-        console.log("convertHTTPResponseToREST JSON: ", json);
-        console.log("convertHTTPResponseToREST TYPE: ", type);
+        // console.log("convertHTTPResponseToREST JSON: ", json);
+        // console.log("convertHTTPResponseToREST TYPE: ", type);
         switch (type) {
             case GET_LIST:
             case GET_MANY_REFERENCE:
