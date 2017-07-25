@@ -1,13 +1,34 @@
 var express = require('express');
+var swaggerUi = require('swagger-ui-express');
+
+var JsonRefs = require('json-refs');
+var YAML = require('js-yaml');
 var router = express.Router();
+
+
+var optionsRef = {
+    filter: ['relative', 'remote'],
+    loaderOptions: {
+        processContent: function (res, cb) {
+            cb(undefined, YAML.safeLoad(res.text));
+        }
+    }
+};
+
+JsonRefs.resolveRefsAt('./swagger/index.yaml', optionsRef).then(function (results) {
+    // console.log(results.resolved);
+    // console.log("================refs ",results.refs);
+    router.get('/api-docs', swaggerUi.serve, swaggerUi.setup(results.resolved));
+}, function (err) {
+    console.log(err.stack);
+});
+
 
 var ctrlCategory = require('../controllers/category.controller');
 var ctrlPlaylist = require('../controllers/playlist.controller');
 var ctrlFile = require('../controllers/file');
 var ctrlKeyword = require('../controllers/keyword.controller');
 var ctrlNotification = require('../controllers/notification.controller');
-
-var notification = require('../config/notification.config');
 
 //  Category APIs
 router.post('/category', ctrlCategory.categoryPost);

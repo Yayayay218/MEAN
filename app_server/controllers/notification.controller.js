@@ -3,6 +3,8 @@ mongoose.Promise = global.Promise;
 
 var Notifications = mongoose.model('Notifications');
 
+var pushNotification = require('../config/notification.config');
+
 var sendJSONresponse = function (res, status, content) {
     res.status(status);
     res.json(content);
@@ -51,6 +53,7 @@ module.exports.notificationGetAll = function (req, res) {
                     page: notification.page,
                     pages: notification.pages
                 };
+                pushNotification.pushNotification();
                 sendJSONresponse(res, 200, results);
             }
         })

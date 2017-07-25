@@ -1,0 +1,53 @@
+Category:
+  post:
+    tags:
+      - category
+    parameters:
+      - name: data
+        description: Review object
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/Category'
+    responses:
+      200:
+        description: OK
+        schema:
+          $ref: '#/definitions/Category'
+  get:
+    tags:
+      - Category
+    responses:
+      200:
+        description: OK
+        schema:
+          $ref: '#/definitions/Category'
+  delete:
+    tags:
+      - Category
+    parameters:
+      - name: id
+        description: Category id
+        required: true
+        in: path
+        type: string
+    responses:
+      200:
+        description: OK
+        schema:
+          $ref: '#/definitions/Category'
+CategoryById:
+  get:
+    tags:
+      - Category
+    parameters:
+      - name: id
+        description: Category id
+        required: true
+        in: path
+        type: string
+    responses:
+      200:
+        description: OK
+        schema:
+          $ref: '#/definitions/Category'

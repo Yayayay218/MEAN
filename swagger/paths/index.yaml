@@ -1,0 +1,4 @@
+/category:
+  $ref: category.yaml#/category
+/category/{id}:
+  $ref: category.yaml#/categoryById
